@@ -13,15 +13,16 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: #d4d4d4;
+    background-color: #192335;
 }
 
 main {
   width: 600px;
   height: 1000px;
-  background-color: #303030;
+  background-color: #374558;
   border-radius: 30px;
   padding: 0px 40px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.8);
 }
 
 header {
@@ -38,20 +39,22 @@ header img {
 
 h1 {
     margin-bottom: 15px;
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;;
 }
 
 p {
   margin-bottom: 30px;
   width: 80%;
   text-align: center;
+  opacity: 0.8;
+  font-size: 17px;
 }
 
 a {
     text-decoration: none;
     color: white;
     font-size: 20px;
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;;
 }
 
 ul {
@@ -64,39 +67,96 @@ ul {
 li {
     padding: 20px;
     border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden; 
 }
 
 .item {
     display: flex;
     align-items: center;
-    margin-left: 170px; 
+    margin-left: 180px; 
     gap: 20px;
 }
 
 .linkedin {
-    background: linear-gradient(90deg, #0274b6 0%, #014161 100%);
+    background: linear-gradient(90deg, #0072af 0%, #002b49 100%);
 }
 
 .github {
-    background: linear-gradient(90deg, #a132b4 0%, #482676 100%);
+    background: linear-gradient(90deg, #6b3fba 0%, #301c6b 100%);
 }
 
 .portafolio {
-    background: linear-gradient(90deg, #b16097 0%, #701e47 100%);
+    background: linear-gradient(90deg, #c76caa 0%, #701e47 100%);
 }
 
 .figma {
-   background: linear-gradient(90deg, #706eff 0%, #1e1c61 100%); 
+   background: linear-gradient(90deg, #e64f3d 0%, #b356cd 45%, #29b0fe 100%); 
 }
 
 .hackerrank {
-    background: linear-gradient(90deg, #14306d 0%, #050c1b 100%); 
+    background: linear-gradient(90deg, #00e060 0%, #006d35 100%); 
 }
 
 .leetcode {
-    background: linear-gradient(90deg, #e7a41f 0%, #251c0c 100%); 
+    background: linear-gradient(90deg, #e7a41f 0%, #d46c00 100%); 
 }
 
 .email {
-    background: linear-gradient(90deg, #419161 0%, #173222 100%); 
+    background: linear-gradient(90deg, #14306d 0%, #050c1b 100%); 
+}
+
+/* Efects */
+li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.15), 
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+li:hover::before {
+    left: 100%;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.linkedin:hover {
+    background: linear-gradient(90deg, #002b49 0%, #0072af 100%);
+}
+
+.github:hover {
+    background: linear-gradient(90deg, #301c6b 0%, #6b3fba 100%);
+}
+
+.portafolio:hover {
+    background: linear-gradient(90deg, #701e47 0%, #c76caa 100%);
+}
+
+.figma:hover {
+    background: linear-gradient(90deg, #29b0fe 0%, #b356cd 45%, #e64f3d 100%);
+}
+
+.hackerrank:hover {
+    background: linear-gradient(90deg, #006d35 0%, #00e060 100%);
+}
+
+.leetcode:hover {
+    background: linear-gradient(90deg, #d46c00 0%, #e7a41f 100%);
+}
+
+.email:hover {
+    background: linear-gradient(90deg, #050c1b 0%, #14306d 100%);
 }

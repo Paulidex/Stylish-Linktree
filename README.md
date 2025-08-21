@@ -35,7 +35,7 @@ A customized version of the **Linktree** page, designed to centralize my officia
 
 Here is a screenshot showing how the page looks:
 
-![Linktree - Paulidex Version](path/to/capture.png)
+![Linktree - Paulidex Version](assets/capture.png)
 
 ## License
 
